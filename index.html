@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Águas Claras Turismo | Passeio de lancha em Ubatuba</title>
+<meta name="description" content="Passeio de lancha em Ubatuba saindo do Itaguá: Ilha das Couves, Toca da Velha, Ilha Rachada e praias do norte. Lancha nova, marinheiro local e reserva pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Águas Claras Turismo — Passeios de lancha em Ubatuba",
+  "telephone": "+55 12 99112-3943",
+  "image": "img/lancha-praia.jpg",
+  "address": {"@type": "PostalAddress","streetAddress": "Av. Leovigildo Dias Vieira, Itaguá","addressLocality": "Ubatuba","addressRegion": "SP","postalCode": "11680-000","addressCountry": "BR"},
+  "geo": {"@type": "GeoCoordinates","latitude": -23.4504665,"longitude": -45.0654173},
+  "aggregateRating": {"@type": "AggregateRating","ratingValue": "5.0","reviewCount": "123"},
+  "areaServed": "Ubatuba"
+}
+</script>
+<style>
+:root{
+  --navy:#0b1f7a; --navy-2:#071457; --sea:#14a7c4; --sea-2:#0e8aa3; --aqua:#dff6f8;
+  --sand:#f7f3ea; --ink:#0d1633; --muted:#55607a; --line:#e4e7ef; --white:#fff; --gold:#f5b301;
+  --radius:20px; --shadow:0 18px 50px -20px rgba(11,31,122,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--ink);background:var(--sand);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.08;letter-spacing:-.02em}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 16px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sea-2)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;padding:15px 22px;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s;min-height:52px}
+.btn:active{transform:scale(.98)}
+.btn-wa{background:#1fa855;color:#fff;box-shadow:0 12px 30px -12px rgba(31,168,85,.7)}
+.btn-wa:hover{background:#178f47}
+.btn-ghost{border:1.5px solid var(--line);background:#fff;color:var(--navy)}
+.btn svg{width:20px;height:20px;flex:none}
+section{padding:72px 0}
+.sec-head{max-width:620px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(28px,6.4vw,44px);margin:12px 0 10px;color:var(--navy)}
+.sec-head p{color:var(--muted);font-size:17px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(247,243,234,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,31,122,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand img{width:46px;height:46px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #fff,0 4px 14px -4px rgba(11,31,122,.4)}
+.brand b{font-family:"Bricolage Grotesque";font-size:18px;color:var(--navy);line-height:1.05;display:block}
+.brand small{font-size:12px;color:var(--muted);font-weight:600}
+.nav-links{display:none;gap:26px;font-weight:600;font-size:15px;color:var(--navy)}
+.nav-links a:hover{color:var(--sea-2)}
+.nav .btn{padding:10px 16px;min-height:42px;font-size:14px}
+
+/* hero */
+.hero{padding:28px 0 56px;position:relative}
+.hero-grid{display:grid;gap:28px}
+.rating-pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:7px 14px 7px 10px;border-radius:999px;font-size:14px;font-weight:600;color:var(--navy)}
+.stars{color:var(--gold);letter-spacing:1px;font-size:14px}
+.hero h1{font-size:clamp(36px,9.5vw,68px);color:var(--navy);margin:18px 0 16px}
+.hero h1 em{font-style:normal;color:var(--sea);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:0;bottom:-6px;width:100%;height:12px}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:520px}
+.hero-ctas{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.hero-points{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;font-weight:600;color:var(--navy)}
+.hero-points span{display:inline-flex;align-items:center;gap:6px}
+.hero-points svg{width:18px;height:18px;color:var(--sea)}
+.hero-visual{position:relative}
+.hero-photo{border-radius:28px;overflow:hidden;aspect-ratio:4/4.4;box-shadow:var(--shadow);position:relative}
+.hero-photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.04)}
+.route-card{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-radius:18px;padding:14px 16px;box-shadow:0 14px 34px -14px rgba(0,0,0,.35)}
+.route-card .top{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--sea-2)}
+.route-card .live{display:inline-flex;align-items:center;gap:6px;color:#1fa855}
+.route-card .live i{width:8px;height:8px;border-radius:50%;background:#1fa855;box-shadow:0 0 0 0 rgba(31,168,85,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(31,168,85,0)}100%{box-shadow:0 0 0 0 rgba(31,168,85,0)}}
+.route-card h3{font-size:18px;color:var(--navy);margin:6px 0 10px}
+.stops{display:flex;align-items:center;gap:0;font-size:12.5px;font-weight:600;color:var(--ink)}
+.stops span{display:flex;flex-direction:column;align-items:center;gap:5px;flex:1;text-align:center;line-height:1.2}
+.stops span::before{content:"";width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--sea)}
+.stops-line{position:relative}
+.stops-line::before{content:"";position:absolute;top:5px;left:16%;right:16%;height:2px;background:repeating-linear-gradient(90deg,var(--sea) 0 6px,transparent 6px 11px)}
+.badge-float{position:absolute;top:14px;right:14px;background:var(--navy);color:#fff;border-radius:14px;padding:9px 12px;font-size:12.5px;font-weight:600;line-height:1.3;box-shadow:0 10px 24px -10px rgba(7,20,87,.7)}
+.badge-float b{font-family:"Bricolage Grotesque";font-size:20px;display:block}
+
+/* marquee */
+.marquee{background:var(--navy);color:#fff;overflow:hidden;padding:16px 0}
+.marquee-track{display:flex;gap:42px;white-space:nowrap;width:max-content;animation:scroll 32s linear infinite;font-family:"Bricolage Grotesque";font-size:20px;font-weight:600}
+.marquee-track span{display:inline-flex;align-items:center;gap:42px}
+.marquee-track span::after{content:"✦";color:var(--sea);font-size:14px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* roteiros */
+.tours{display:grid;gap:18px}
+.tour{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.tour:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.tour-img{aspect-ratio:16/10;overflow:hidden;position:relative}
+.tour-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.tour:hover .tour-img img{transform:scale(1.06)}
+.tag{position:absolute;top:12px;left:12px;background:#fff;color:var(--navy);font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px}
+.tour-body{padding:20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.tour-body h3{font-size:22px;color:var(--navy)}
+.tour-body p{color:var(--muted);font-size:15.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips li{list-style:none;font-size:12.5px;font-weight:600;background:var(--aqua);color:var(--sea-2);padding:5px 10px;border-radius:999px}
+.tour-body .btn{margin-top:auto;align-self:flex-start;padding:12px 18px;min-height:46px;font-size:15px}
+
+/* why */
+.why{background:#fff}
+.why-grid{display:grid;gap:14px}
+.why-item{display:flex;gap:16px;padding:20px;border-radius:var(--radius);background:var(--sand);border:1px solid var(--line)}
+.why-ico{width:48px;height:48px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;flex:none}
+.why-ico svg{width:24px;height:24px}
+.why-item h3{font-size:18px;color:var(--navy);margin-bottom:4px}
+.why-item p{font-size:15px;color:var(--muted)}
+.why-photo{border-radius:24px;overflow:hidden;aspect-ratio:4/3;margin-top:8px;position:relative}
+.why-photo img{width:100%;height:100%;object-fit:cover}
+.why-photo figcaption{position:absolute;left:12px;bottom:12px;background:rgba(7,20,87,.85);color:#fff;font-size:13px;font-weight:600;padding:8px 12px;border-radius:12px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.gallery figure{border-radius:16px;overflow:hidden;position:relative;aspect-ratio:1}
+.gallery figure.tall{grid-row:span 2;aspect-ratio:auto}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery figure:hover img{transform:scale(1.06)}
+.gallery figcaption{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.92);color:var(--navy);font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px}
+
+/* steps */
+.steps{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;position:relative;overflow:hidden}
+.steps .sec-head h2{color:#fff}
+.steps .sec-head p{color:rgba(255,255,255,.75)}
+.steps .eyebrow{color:#7fe3f2}
+.step-list{display:grid;gap:14px;counter-reset:s}
+.step{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:22px;position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:"Bricolage Grotesque";font-size:34px;font-weight:800;color:#7fe3f2;display:block;margin-bottom:6px}
+.step h3{font-size:19px;margin-bottom:4px}
+.step p{color:rgba(255,255,255,.75);font-size:15px}
+.waves{position:absolute;right:-60px;bottom:-30px;width:320px;opacity:.12}
+
+/* reviews */
+.reviews{display:grid;gap:14px}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:12px}
+.review p{font-size:15.5px;color:var(--ink)}
+.review footer{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:var(--navy);margin-top:auto}
+.review footer i{width:36px;height:36px;border-radius:50%;background:var(--aqua);color:var(--sea-2);display:grid;place-items:center;font-style:normal;font-weight:800}
+.review footer small{display:block;color:var(--muted);font-weight:500;font-size:12.5px}
+.reviews-cta{margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-weight:600;color:var(--navy)}
+.big-rate{font-family:"Bricolage Grotesque";font-size:44px;font-weight:800;line-height:1}
+
+/* local */
+.local{background:#fff}
+.local-grid{display:grid;gap:18px}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:300px}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.info{display:flex;flex-direction:column;gap:12px}
+.info-row{display:flex;gap:14px;padding:16px;border-radius:16px;background:var(--sand);border:1px solid var(--line)}
+.info-row svg{width:22px;height:22px;color:var(--sea-2);flex:none;margin-top:2px}
+.info-row b{display:block;color:var(--navy);font-size:15px}
+.info-row span{font-size:14.5px;color:var(--muted)}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:820px}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0 18px}
+summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;color:var(--navy);display:flex;justify-content:space-between;gap:16px;font-size:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;line-height:1;color:var(--sea-2);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 18px;color:var(--muted);font-size:15.5px}
+
+/* final */
+.final{position:relative;color:#fff;text-align:center;padding:96px 0;overflow:hidden}
+.final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.final::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,20,87,.55),rgba(7,20,87,.82));z-index:1}
+.final .wrap{position:relative;z-index:2}
+.final h2{font-size:clamp(30px,7vw,52px);margin-bottom:12px}
+.final p{color:rgba(255,255,255,.85);max-width:480px;margin:0 auto 26px;font-size:17px}
+
+footer.site{background:var(--navy-2);color:rgba(255,255,255,.7);padding:34px 0 100px;font-size:14px}
+footer.site .wrap{display:flex;flex-direction:column;gap:14px}
+footer.site .brand b{color:#fff}
+footer.site .brand small{color:rgba(255,255,255,.6)}
+
+/* floating */
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;width:60px;height:60px;border-radius:50%;background:#1fa855;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(31,168,85,.8)}
+.fab svg{width:30px;height:30px}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #1fa855;animation:ring 2.2s infinite}
+@keyframes ring{from{transform:scale(1);opacity:.8}to{transform:scale(1.5);opacity:0}}
+
+.reveal{opacity:0;transform:translateY(24px)}
+.no-gsap .reveal{opacity:1;transform:none}
+
+@media (min-width:640px){
+  .hero-ctas{flex-direction:row}
+  .tours{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .reviews{grid-template-columns:repeat(2,1fr)}
+  .step-list{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:960px){
+  section{padding:104px 0}
+  .nav-links{display:flex}
+  .hero{padding:48px 0 88px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
+  .hero-photo{aspect-ratio:4/4.6}
+  .tours{grid-template-columns:repeat(3,1fr)}
+  .why-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .why-photo{margin-top:0;aspect-ratio:4/5}
+  .gallery{grid-template-columns:repeat(4,1fr)}
+  .reviews{grid-template-columns:repeat(3,1fr)}
+  .local-grid{grid-template-columns:1.3fr 1fr}
+  .map,.map iframe{min-height:420px}
+  footer.site{padding-bottom:34px}
+  footer.site .wrap{flex-direction:row;justify-content:space-between;align-items:center}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body class="no-gsap">
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand">
+      <img src="img/logo-original.jpg" alt="Logo Águas Claras Turismo">
+      <span><b>Águas Claras</b><small>Passeios de lancha · Ubatuba</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#roteiros">Roteiros</a>
+      <a href="#lancha">A lancha</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#embarque">Embarque</a>
+    </nav>
+    <a class="btn btn-wa wa" href="#">Reservar</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="rating-pill reveal"><span class="stars">★★★★★</span> 5,0 no Google · 123 avaliações</span>
+      <h1 class="reveal">A Ubatuba que só se vê <em>de lancha<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 Q 25 2 50 7 T 100 7 T 150 7 T 198 6" fill="none" stroke="#14a7c4" stroke-width="4" stroke-linecap="round"/></svg></em>.</h1>
+      <p class="lead reveal">Ilha das Couves, Toca da Velha e Ilha Rachada em um dia só, saindo do Itaguá. Lancha nova, marinheiro que conhece cada canto e roteiro no ritmo do seu grupo.</p>
+      <div class="hero-ctas reveal">
+        <a class="btn btn-wa wa" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>Ver datas no WhatsApp</a>
+        <a class="btn btn-ghost" href="#roteiros">Conhecer os roteiros</a>
+      </div>
+      <div class="hero-points reveal">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Colete pra todos</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Paradas pra mergulho</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Reagenda se o mar virar</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-photo">
+        <img src="img/lancha-praia.jpg" alt="Lancha da Águas Claras ancorada em praia de água cristalina em Ubatuba" fetchpriority="high" decoding="async" width="1171" height="1352">
+        <div class="badge-float"><b>6 paradas</b>no roteiro norte</div>
+        <div class="route-card">
+          <div class="top"><span>Roteiro Norte</span><span class="live"><i></i>Saídas diárias</span></div>
+          <h3>Do Itaguá à Ilha das Couves</h3>
+          <div class="stops stops-line">
+            <span>Itaguá</span><span>Toca da Velha</span><span>Ilha Rachada</span><span>Ilha das Couves</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Ilha das Couves</span><span>Toca da Velha</span><span>Ilha Rachada</span><span>Praia do Engenho</span><span>Praia da Almada</span><span>Ilha dos Porcos</span><span>Ilha do Prumirim</span>
+    <span>Ilha das Couves</span><span>Toca da Velha</span><span>Ilha Rachada</span><span>Praia do Engenho</span><span>Praia da Almada</span><span>Ilha dos Porcos</span><span>Ilha do Prumirim</span>
+  </div>
+</div>
+
+<section id="roteiros">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Roteiros</span>
+      <h2>Escolha o mar do seu dia</h2>
+      <p>Cada saída é pensada pro grupo que está a bordo: mais mergulho, mais praia ou mais tempo pra foto.</p>
+    </div>
+    <div class="tours">
+      <article class="tour reveal">
+        <div class="tour-img"><img src="img/ilha-couves.jpg" alt="Ilha das Couves vista da lancha" loading="lazy"><span class="tag">Mais pedido</span></div>
+        <div class="tour-body">
+          <h3>Roteiro Norte · Ilha das Couves</h3>
+          <p>A ilha de água verde que todo mundo quer conhecer, com paradas nas praias do caminho.</p>
+          <ul class="chips"><li>Ilha das Couves</li><li>Toca da Velha</li><li>Ilha Rachada</li><li>Almada</li></ul>
+          <a class="btn btn-wa wa" data-msg="Oi! Quero saber sobre o Roteiro Norte (Ilha das Couves)." href="#">Quero esse</a>
+        </div>
+      </article>
+      <article class="tour reveal">
+        <div class="tour-img"><img src="img/toca-da-velha.jpg" alt="Gruta da Toca da Velha em Ubatuba" loading="lazy"><span class="tag">Mergulho</span></div>
+        <div class="tour-body">
+          <h3>Ilhas e grutas</h3>
+          <p>Água rasa e transparente pra nadar perto das pedras. Com sorte, toninhas acompanham a lancha.</p>
+          <ul class="chips"><li>Ilha dos Porcos</li><li>Prumirim</li><li>Snorkel</li></ul>
+          <a class="btn btn-wa wa" data-msg="Oi! Quero saber sobre o passeio de ilhas e grutas." href="#">Quero esse</a>
+        </div>
+      </article>
+      <article class="tour reveal">
+        <div class="tour-img"><img src="img/grupo-lancha.jpg" alt="Grupo de amigos na proa da lancha" loading="lazy"><span class="tag">Exclusivo</span></div>
+        <div class="tour-body">
+          <h3>Lancha só pro seu grupo</h3>
+          <p>Família, aniversário ou casal: a lancha é de vocês, com roteiro montado junto. Dá até pra fazer churrasco a bordo.</p>
+          <ul class="chips"><li>Privativo</li><li>Roteiro sob medida</li><li>Churrasco</li></ul>
+          <a class="btn btn-wa wa" data-msg="Oi! Quero fechar a lancha só pro meu grupo." href="#">Montar o meu</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="lancha">
+  <div class="wrap why-wrap">
+    <div>
+      <div class="sec-head reveal">
+        <span class="eyebrow">Por que a Águas Claras</span>
+        <h2>Você só se preocupa com a foto</h2>
+        <p>O resto a gente resolve: horário, rota, segurança e as melhores paradas do dia.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l2 3h14l2-3M4 17l1.5-5h13L20 17M9 12V6l5 3"/></svg></div>
+          <div><h3>Lancha nova e confortável</h3><p>Limpa, potente e estável, com toldo e estofado pra curtir o trajeto.</p></div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+          <div><h3>Marinheiro que vira guia</h3><p>Conta a história de cada ilha e sabe onde a água está mais clara naquele dia.</p></div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/></svg></div>
+          <div><h3>Mar ruim? Reagenda</h3><p>Se o tempo não colaborar, a gente remarca pra você aproveitar de verdade.</p></div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div><h3>Atendimento que responde</h3><p>Tira as dúvidas no WhatsApp e indica o melhor passeio pro seu grupo.</p></div>
+        </div>
+      </div>
+    </div>
+    <figure class="why-photo reveal">
+      <img src="img/conforto.jpg" alt="Passageira relaxando no estofado da lancha" loading="lazy">
+      <figcaption>Conforto do embarque ao desembarque</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="fotos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Fotos reais dos passeios</span>
+      <h2>Água verde-esmeralda, sem filtro</h2>
+    </div>
+    <div class="gallery">
+      <figure class="tall reveal"><img src="img/casal-ilha-rachada.jpg" alt="Casal na lancha em frente à Ilha Rachada" loading="lazy"><figcaption>Ilha Rachada</figcaption></figure>
+      <figure class="reveal"><img src="img/aerea-praia.jpg" alt="Vista aérea de praia em Ubatuba" loading="lazy"><figcaption>Praias do norte</figcaption></figure>
+      <figure class="reveal"><img src="img/golfinhos.jpg" alt="Toninhas nadando ao lado da lancha" loading="lazy"><figcaption>Toninhas no caminho</figcaption></figure>
+      <figure class="tall reveal"><img src="img/marinheiro.jpg" alt="Marinheiro conduzindo a lancha" loading="lazy"><figcaption>Nosso marinheiro</figcaption></figure>
+      <figure class="reveal"><img src="img/agua-verde.jpg" alt="Água verde transparente perto das pedras" loading="lazy"><figcaption>Água cristalina</figcaption></figure>
+      <figure class="reveal"><img src="img/pedras.jpg" alt="Amigas na proa da lancha perto das pedras" loading="lazy"><figcaption>Na proa</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <svg class="waves" viewBox="0 0 200 120" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" aria-hidden="true"><path d="M5 30q20-18 40 0t40 0 40 0 40 0 30 0"/><path d="M5 60q20-18 40 0t40 0 40 0 40 0 30 0"/><path d="M5 90q20-18 40 0t40 0 40 0 40 0 30 0"/></svg>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Como reservar</span>
+      <h2>Do WhatsApp pro mar em 3 passos</h2>
+      <p>Sem cadastro, sem complicação.</p>
+    </div>
+    <div class="step-list">
+      <div class="step reveal"><h3>Chama no WhatsApp</h3><p>Diz a data e quantas pessoas vão. A gente responde rapidinho.</p></div>
+      <div class="step reveal"><h3>Escolhe o roteiro</h3><p>Indicamos o melhor passeio pro seu grupo e pra previsão do mar.</p></div>
+      <div class="step reveal"><h3>Embarca no Itaguá</h3><p>É só chegar no horário combinado. O marinheiro te espera.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="avaliacoes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Avaliações no Google</span>
+      <h2>Quem navegou, recomenda</h2>
+    </div>
+    <div class="reviews">
+      <article class="review reveal">
+        <span class="stars">★★★★★</span>
+        <p>“A lancha é excelente, nova, limpinha, potente e confortável. O melhor custo-benefício da cidade. Passeio nota 10!”</p>
+        <footer><i>M</i><span>Mishelly A.<small>Roteiro Norte + Ilha das Couves</small></span></footer>
+      </article>
+      <article class="review reveal">
+        <span class="stars">★★★★★</span>
+        <p>“Marinheiro muito competente, passando muita confiança. Ainda tivemos a sorte de avistar um grupo de toninhas no trajeto.”</p>
+        <footer><i>M</i><span>Marcelo P.<small>Couves, Toca da Velha e Ilha Rachada</small></span></footer>
+      </article>
+      <article class="review reveal">
+        <span class="stars">★★★★★</span>
+        <p>“Empresa flexível: o tempo estava ruim no dia agendado e eles reagendaram pra termos uma experiência melhor.”</p>
+        <footer><i>V</i><span>Vitor A.<small>Passeio reagendado</small></span></footer>
+      </article>
+    </div>
+    <div class="reviews-cta reveal">
+      <span class="big-rate">5,0</span>
+      <span><span class="stars">★★★★★</span><br>123 avaliações no Google</span>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJ8ckJc7RTzZQR-nEMmFmlwb4" target="_blank" rel="noopener">Ler todas</a>
+    </div>
+  </div>
+</section>
+
+<section class="local" id="embarque">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Ponto de embarque</span>
+      <h2>Embarque no Itaguá, no centro de Ubatuba</h2>
+    </div>
+    <div class="local-grid">
+      <div class="map reveal">
+        <iframe title="Mapa do embarque Águas Claras Turismo" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=-23.4504665,-45.0654173&z=16&output=embed"></iframe>
+      </div>
+      <div class="info">
+        <div class="info-row reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Endereço</b><span>Av. Leovigildo Dias Vieira, Itaguá · Ubatuba, SP · 11680-000</span></div></div>
+        <div class="info-row reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Atendimento</b><span>Todos os dias, até 22h, pelo WhatsApp</span></div></div>
+        <div class="info-row reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><b>WhatsApp</b><span><a href="tel:+5512991123943">(12) 99112-3943</a></span></div></div>
+        <a class="btn btn-wa wa reveal" href="#">Combinar meu passeio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Dúvidas</span>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal"><summary>De onde sai o passeio de lancha?</summary><p>O embarque é na Av. Leovigildo Dias Vieira, na orla do Itaguá, em Ubatuba. O ponto exato a gente manda pelo WhatsApp quando confirmar.</p></details>
+      <details class="reveal"><summary>Qual passeio vai até a Ilha das Couves?</summary><p>O Roteiro Norte. Ele passa pela Toca da Velha e pela Ilha Rachada e tem parada nas praias do caminho, como a Almada.</p></details>
+      <details class="reveal"><summary>E se o mar estiver ruim no dia?</summary><p>A segurança vem primeiro. Se o tempo não colaborar, a gente reagenda o seu passeio pra outra data.</p></details>
+      <details class="reveal"><summary>Posso fechar a lancha só pro meu grupo?</summary><p>Pode. Monte o roteiro com a gente pra família, amigos ou casal. Dá até pra combinar churrasco a bordo.</p></details>
+      <details class="reveal"><summary>Criança pode ir?</summary><p>Pode, com colete do tamanho certo. Conte as idades no WhatsApp que a gente indica o roteiro mais tranquilo.</p></details>
+      <details class="reveal"><summary>Como faço pra reservar?</summary><p>Chame no WhatsApp (12) 99112-3943 com a data e o número de pessoas. A gente confirma valores e horários na hora.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <img src="img/ilha-rachada.jpg" alt="" loading="lazy">
+  <div class="wrap reveal">
+    <h2>Seu dia mais bonito em Ubatuba começa aqui</h2>
+    <p>Nos fins de semana e no verão as datas acabam rápido. Garanta a sua.</p>
+    <a class="btn btn-wa wa" href="#">Reservar pelo WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <a href="#" class="brand"><img src="img/logo-original.jpg" alt=""><span><b>Águas Claras Turismo</b><small>Passeios de lancha em Ubatuba</small></span></a>
+    <span>Av. Leovigildo Dias Vieira, Itaguá · Ubatuba, SP · (12) 99112-3943</span>
+  </div>
+</footer>
+
+<a class="fab wa" href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  const WA = '5512991123943';
+  const base = 'Oi! Vi o site da Águas Claras e quero saber sobre o passeio de lancha.';
+  document.querySelectorAll('.wa').forEach(a => {
+    a.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(a.dataset.msg || base);
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+
+  if (window.gsap && window.ScrollTrigger && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.body.classList.remove('no-gsap');
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to('.hero .reveal', {opacity:1, y:0, duration:.9, ease:'power3.out', stagger:.1, delay:.1});
+    gsap.from('.hero-photo img', {scale:1.18, duration:1.6, ease:'power2.out'});
+    gsap.from('.route-card', {y:30, opacity:0, duration:.8, delay:.7, ease:'back.out(1.6)'});
+    gsap.from('.badge-float', {scale:.6, opacity:0, duration:.6, delay:1, ease:'back.out(2)'});
+    gsap.to('.hero-photo img', {yPercent:8, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+    ScrollTrigger.batch('main .reveal:not(.hero .reveal)', {
+      start:'top 88%',
+      onEnter: els => gsap.to(els, {opacity:1, y:0, duration:.8, ease:'power3.out', stagger:.08, overwrite:true})
+    });
+  } else {
+    document.body.classList.add('no-gsap');
+  }
+</script>
+</body>
+</html>
