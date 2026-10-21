@@ -1,0 +1,16 @@
+{
+  "name": "Águas Claras Turismo · Passeios de Lancha em Ubatuba",
+  "short_name": "Águas Claras",
+  "description": "Passeios de lancha privativos em Ubatuba: Roteiro Norte (Ilha das Couves) e Roteiro Sul (Ilha Anchieta). Saídas do Itaguá e Saco da Ribeira.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071A5C",
+  "theme_color": "#071A5C",
+  "icons": [
+    { "src": "/favicon-48x48.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "/favicon-96x96.png", "sizes": "96x96", "type": "image/png" },
+    { "src": "/favicon-144x144.png", "sizes": "144x144", "type": "image/png" },
+    { "src": "/favicon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/favicon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://aguasclarasturismo.com.br/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://aguasclarasturismo.com.br/img/lancha-hero-og.jpg</image:loc>
+      <image:title>Passeio de Lancha em Ubatuba - Águas Claras Turismo</image:title>
+      <image:caption>Lancha privativa da Águas Claras Turismo nas águas verde-esmeralda de Ubatuba - SP</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aguasclarasturismo.com.br/img/drone-lanchas.jpg</image:loc>
+      <image:title>Vista aérea de drone das lanchas em Ubatuba</image:title>
+      <image:caption>Mergulho em piscinas naturais cristalinas no passeio de lancha em Ubatuba</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aguasclarasturismo.com.br/img/ilha-couves.jpg</image:loc>
+      <image:title>Passeio de Lancha para a Ilha das Couves em Ubatuba</image:title>
+      <image:caption>Roteiro Norte da Águas Claras Turismo com parada de mergulho na Ilha das Couves</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aguasclarasturismo.com.br/img/cockpit-logo.jpg</image:loc>
+      <image:title>Interior da Lancha Águas Claras Turismo Ubatuba</image:title>
+      <image:caption>Bancos estofados e piso náutico personalizado da Águas Claras Turismo em Ubatuba</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aguasclarasturismo.com.br/img/snorkel-peixes.jpg</image:loc>
+      <image:title>Mergulho de Snorkel na Ilha Anchieta e Ilha das Couves</image:title>
+      <image:caption>Parada para mergulho com peixinhos nos roteiros Norte e Sul em Ubatuba</image:caption>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://aguasclarasturismo.com.br/videos/poster-festa-a-bordo.jpg</video:thumbnail_loc>
+      <video:title>Festa e Passeio de Lancha Privativo em Ubatuba - Águas Claras Turismo</video:title>
+      <video:description>Passeio de lancha privativo para o seu grupo em Ubatuba com churrasco e festa a bordo rumo à Ilha das Couves e Ilha Anchieta.</video:description>
+      <video:content_loc>https://aguasclarasturismo.com.br/videos/festa-a-bordo.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+</urlset>
