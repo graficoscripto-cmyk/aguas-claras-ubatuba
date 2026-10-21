@@ -142,8 +142,8 @@ section { padding: 72px 0; position: relative; }
 
 /* hero: no celular a foto ocupa o topo e o texto fica embaixo */
 .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; color: #fff; background: var(--abyss); overflow: hidden; padding: 96px 0 36px; }
-.hero-bg { position: absolute; left: 0; right: 0; top: 0; height: 60svh; }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+.hero-bg { position: absolute; left: 0; right: 0; top: 0; height: 60svh; overflow: hidden; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; transform: scale(1.1); transform-origin: 50% 40%; }
 .hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5, 15, 58, 0.5) 0%, rgba(5, 15, 58, 0) 20%, rgba(5, 15, 58, 0) 60%, rgba(5, 15, 58, 0.85) 88%, var(--abyss) 100%); }
 .hero-content { position: relative; z-index: 2; width: 100%; }
 .rating-pill { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px 7px 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-size: 13.5px; font-weight: 600; }
@@ -761,8 +761,9 @@ window.addEventListener('DOMContentLoaded', () => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches || typeof gsap === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
   gsap.from('.hero-in', { y: 22, opacity: 0.001, duration: 0.8, stagger: 0.08, ease: 'power3.out', clearProps: 'transform,opacity' });
-  gsap.fromTo('.hero-bg img', { scale: 1.12 }, { scale: 1, duration: 1.8, ease: 'power2.out' });
-  gsap.to('.hero-bg img', { yPercent: 6, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  // A foto fica sempre com zoom ≥ 1.1 dentro do .hero-bg (overflow hidden): o parallax de 4% nunca mostra a borda.
+  gsap.fromTo('.hero-bg img', { scale: 1.22 }, { scale: 1.1, duration: 1.8, ease: 'power2.out' });
+  gsap.to('.hero-bg img', { yPercent: 4, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
   ScrollTrigger.batch('.reveal', { start: 'top 90%', once: true, onEnter: els => gsap.from(els, { y: 24, duration: 0.6, stagger: 0.07, ease: 'power3.out', clearProps: 'transform' }) });
   document.querySelectorAll('.chain').forEach(ch => {
     gsap.fromTo(ch, { '--draw': 0 }, { '--draw': 1, duration: 1.2, ease: 'power2.out', scrollTrigger: { trigger: ch, start: 'top 85%', once: true } });
